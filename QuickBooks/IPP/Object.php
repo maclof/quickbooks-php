@@ -178,7 +178,7 @@ class QuickBooks_IPP_Object
 					isset($this->_data[$field]) and 
 					is_array($this->_data[$field]))
 				{
-					return $this->_data[$field][0]; 
+					return count($this->_data[$field]) == 1 ? $this->_data[$field][0] : $this->_data[$field]; 
 				}
 				else
 				{
